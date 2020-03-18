@@ -18,7 +18,7 @@ body{height:100vh;
 box-sizing:border-box;
 overflow-y:hidden;}
 </style>
-
+{% if g == 1 %}
 <center>
 
     <h1>Stock Price Prediction </h1>
@@ -32,12 +32,14 @@ overflow-y:hidden;}
             </div>
     </form>
 </center>
+{% endif %}
 
-
+{% if g == 0 %}
 <center>
 
 <h1><b>please enter the stock symbol accurately or check your internet connection</b></h1>
     </center>
+{% endif %}
 </font>
 </body>
 </html>
