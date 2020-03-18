@@ -11,4 +11,3 @@ django>=3.0.0
 django-heroku
 yfinance
 datetime
-fix-yahoo-finance
