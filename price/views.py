@@ -86,6 +86,7 @@ def predict(request):
     mlp.fit(x_train, y_train)
 
     pred_mlp = mlp.predict(x_test)
+    print(pred_mlp)
     plt.figure(figsize=(15, 9))
     plt.plot(y_test, label="actual")
     plt.plot(pred_mlp, label="predicted")
@@ -96,6 +97,7 @@ def predict(request):
 
     model_lm = LinearRegression().fit(x_train, y_train)
     pred2 = model_lm.predict(x_test)
+    print(pred2)
     plt.figure(figsize=(20, 10))
     plt.plot(pred2, color='c', label='predicted')
     plt.title("Prediction Vs actual Values using Linear Regression")
