@@ -77,7 +77,7 @@ def predict(request):
 
     plt.plot(y_test, color='g', label='actual')
     plt.legend()
-    plt.savefig('st/ram.jpg')
+    plt.savefig('st/ram.png')
     plt.close()
 
     mlp = MLPRegressor(solver='lbfgs', hidden_layer_sizes=50,
@@ -92,7 +92,7 @@ def predict(request):
     plt.plot(pred_mlp, label="predicted")
     plt.title("Prediction Vs actual Values Using Artifical Neural Network")
     plt.legend()
-    plt.savefig('st/sam.jpg')
+    plt.savefig('st/sam.png')
     plt.close()
 
     model_lm = LinearRegression().fit(x_train, y_train)
@@ -103,7 +103,7 @@ def predict(request):
     plt.title("Prediction Vs actual Values using Linear Regression")
     plt.plot(y_test, color='g', label='actual')
     plt.legend()
-    plt.savefig('st/tam.jpg')
+    plt.savefig('st/tam.png')
     plt.close()
     return render(request, 'result.html', {'sam': sam})
 
